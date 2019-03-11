@@ -5,7 +5,7 @@ var ctx = c.getContext("2d");
 c.height = window.innerHeight;
 c.width = window.innerWidth;
 //chinese characters - taken from the unicode charset
-var matrix = "ABCDEFGHIJKLMNOPQRSTUVWXYZ123456789@#$%^&*()*&^%";
+var matrix = "DIAKTORSEVOOLEVVIDENCYPORTTITOR";
 //converting the string into an array of single characters
 matrix = matrix.split("");
 var font_size = 10;
@@ -23,7 +23,8 @@ function draw()
     //translucent BG to show trail
     ctx.fillStyle = "rgba(0, 0, 0, 0.04)";
     ctx.fillRect(0, 0, c.width, c.height);
-    ctx.fillStyle = "#0F0"; //green text
+    // ctx.fillStyle = "#0F0"; //green text
+    ctx.fillStyle = "#28a7e9"; // evool color text
     ctx.font = font_size + "px arial";
     //looping over drops
     for(var i = 0; i < drops.length; i++)
