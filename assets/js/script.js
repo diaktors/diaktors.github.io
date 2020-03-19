@@ -5,7 +5,7 @@ var ctx = c.getContext("2d");
 c.height = window.innerHeight;
 c.width = window.innerWidth;
 //chinese characters - taken from the unicode charset
-var matrix = "DIAKTORSEVOOLEVVIDENCYPORTTITOR";
+var matrix = "ABCDEFGHIJKLMNOPQRSTUVWXYZ123456789@#$%^&*()*&^%";
 //converting the string into an array of single characters
 matrix = matrix.split("");
 var font_size = 10;
@@ -26,8 +26,9 @@ function draw()
     // ctx.fillStyle = "#0F0"; //green text
     //ctx.fillStyle = "#28a7e9"; // evool color text
     
-    ctx.fillStyle = (function(m,s,c){return (c ? arguments.callee(m,s,c-1) : '#') +
-  s[m.floor(m.random() * s.length)]})(Math,'0123456789ABCDEF',5);
+    // Rainbow
+    // ctx.fillStyle = (function(m,s,c){return (c ? arguments.callee(m,s,c-1) : '#') + s[m.floor(m.random() * s.length)]})(Math,'0123456789ABCDEF',5);
+    ctx.fillStyle = "#0F0"; //verde
     
     ctx.font = font_size + "px arial";
     //looping over drops
